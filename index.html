@@ -3819,6 +3819,7 @@ for (let h = 17; h < 22; h++) { // 7 PM to 10 PM
           body: JSON.stringify(payload)
         });
         const result = await resp.json();
+        console.log('Booking response:', result);
         if (result.status !== "ok") throw new Error(result.message || "Booking failed");
         showPane(4);
       } catch (e) {
